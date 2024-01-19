@@ -30,7 +30,7 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
         good = []
         non_matching = []
         for m,n in matches:
-            if m.distance < 0.5*n.distance:
+            if m.distance < 0.75*n.distance:
                 good.append([m])
             else:
                 non_matching.append([m])
