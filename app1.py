@@ -30,7 +30,7 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
         good = []
         non_matching = []
         for m,n in matches:
-            if m.distance < 0.75*n.distance:
+            if m.distance < 0.6*n.distance:
                 good.append([m])
             else:
                 non_matching.append([m])
@@ -45,8 +45,8 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
         percentage_match = len(good) / len(matches) * 100
         percentage_non_match = len(non_matching) / len(matches) * 100
 
-        st.write(f'Percentage match: {percentage_match}%')
-        st.write(f'Percentage non-match: {percentage_non_match}%')
+        st.write(f'Percentage match: {percentage_match:.2f}%')
+        st.write(f'Percentage non-match: {percentage_non_match:.2f}%')
 
         st.image(img3, caption='Good Matches', use_column_width=True)
         st.image(img4, caption='NON Matching ', use_column_width=True)
