@@ -49,4 +49,4 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
         st.write(f'Percentage non-match: {percentage_non_match:.2f}%')
 
         st.image(img3, caption='Good Matches', use_column_width=True)
-        st.image(img4, caption='NON Matching ', use_column_width=True)
+        st.image(img4, caption='Bad Matches ', use_column_width=True)
